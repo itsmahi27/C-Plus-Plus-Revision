@@ -22,19 +22,27 @@ int partition( int arr[], int s, int e) {
 
     while(i < pivotIndex && j > pivotIndex) {
 
-        while(arr[i] <= pivot) 
-        {
+        // while(arr[i] <= pivot) 
+        // {
+        //     i++;
+        // }
+
+        // while(arr[j] > pivot) {
+        //     j--;
+        // }
+
+        // if(i < pivotIndex && j > pivotIndex) {
+        //     swap(arr[i++], arr[j--]);
+        // }
+        if(arr[i]<=pivot){
             i++;
         }
-
-        while(arr[j] > pivot) {
+        else if(arr[j]>pivot){
             j--;
         }
-
-        if(i < pivotIndex && j > pivotIndex) {
-            swap(arr[i++], arr[j--]);
+        else{
+            swap(arr[i++],arr[j--]);
         }
-
     }
 
     return pivotIndex;
