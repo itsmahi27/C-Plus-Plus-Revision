@@ -3,8 +3,8 @@ void solve(vector<string>& ans, string str, string output, int i) {
     if(i>=str.length()) {
         if(output.length()>0)
         ans.push_back(output);
-        return ;
         }
+        return ;
     
     //exclude
     solve(ans, str, output, i+1);
